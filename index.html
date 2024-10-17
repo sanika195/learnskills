@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Online Course</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+ 
+ <style type="text/css">
+   .theme {
+      background: #07163d;
+      background-size: cover;
+      position: relative;
+      padding: 0;
+      color: white;
+    }
+    .bg-theme {
+      background-color: #07163d;
+      background-size: cover;
+      position: relative;
+      color: white;
+      padding: 0;
+    }
+
+    .nav-link {
+      color: #fff;
+    }
+   
+    
+
+    h1 {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    span {
+      color: #080929;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    hr {
+      color: #43bab4;
+      border: 1px solid #43bab4;
+      width: 30%;
+      
+    }
+
+    figure {
+      transition: transform 0.5s;
+    }
+
+   
+    .nav-link {
+      color: #fff !important;
+      font-weight: bold;
+    }
+    .jumbotron {
+      background: linear-gradient(to right, #080929, #1d4491);
+      color: white;
+      padding: 80px 0;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+    .jumbotron h1 {
+      font-weight: 700;
+     
+    }
+    .jumbotron p {
+      font-size: 1.2rem;
+    }
+    .btn-lg {
+      background-color: #2a6dc9;
+      border: none;
+    }
+    .btn-lg:hover {
+      background-color: #204f7a;
+    }
+     span {
+      color: #2a6dc9;
+    }
+    hr {
+      border-top: 3px solid #43bab4;
+      width: 50px;
+      margin: 20px auto;
+    }
+    .carousel-item img {
+      height: 200px;
+      
+    }
+    .card-text a {
+      text-decoration: none;
+      color: #07163d;
+      font-weight: bold;
+    }
+    .card-text a:hover {
+      color: #2a6dc9;
+    }
+    .footer {
+      background: #07163d;
+      color: white;
+      padding: 20px 0;
+    }
+    .footer h4 {
+      font-weight: bold;
+      display: inline;
+    }
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer ul li {
+      margin-bottom: 10px;
+    }
+    .footer ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer ul li a:hover {
+      color: #43bab4;
+    }
+    
+    
+
+    figcaption {
+      text-align: center;
+      font-size: 25px;
+      font-weight: bold;
+      font-family: 'Courier New', Courier, monospace;
+      text-transform: uppercase;
+      color: darkblue;
+    }
+
+    #about{
+      text-align: center;
+    }
+
+    #feedback{
+      transition: transform 0.3s;
+      text-align: center;
+      text-style:Lucida Bright ;
+    }
+
+    #contact input, textarea {
+      margin-top: 10px;
+    }
+
+    #footer {
+      margin:0px;
+      border: 0px;
+      padding: 2px;
+    }
+
+
+    #footer h4 {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    #footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #footer ul li {
+      margin-bottom: 0px;
+    }
+
+    #socialicons li {
+      display: inline;
+      font-size: 24px;
+      margin-right: 15px;
+    }
+
+ 
+ </style>
+ 
+
+</head>
+<body>
+  <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">LearnSkills</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#gallery">Top Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <!-- Registration Button -->
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
+        </li>
+        <!-- Register Modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Register</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="registerName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="registerName" required>
+            </div>
+            <div class="mb-3">
+              <label for="registerEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="registerEmail" required>
+            </div>
+            <div class="mb-3">
+              <label for="registerPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="registerPassword" required>
+            </div>
+            <div class="mb-3">
+              <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="registerConfirmPassword" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Gender</label><br>
+              <input type="radio" id="male" name="gender" value="male" required> Male
+              <input type="radio" id="female" name="gender" value="female" required> Female
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        <!-- Login Button -->
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+        </li>
+         <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="loginEmail" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="loginPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- Hero Section -->
+<div class="jumbotron bg-theme p-5 text-center">
+  <h1 class="display-4">Welcome to LearnSkills</h1>
+  <p class="lead">Your Education, Our Mission: 100% Free!<br>
+    <i>"Knowledge is the key to endless possibilities. Embrace free courses and unlock your potential today!"</i></p>
+  
+</div>
+
+<!-- Gallery Section -->
+<div class="container my-5" id="gallery">
+  <h1>Top <span>Courses</span></h1>
+  <hr>
+ 
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- First slide (active) -->
+      <div class="carousel-item active">
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem;">
+              <img class="card-img-top" src="img/c1.jfif" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="https://youtube.com/playlist?list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q&si=mNQ5ZXaxDN1rV9YK" target="_blank">Java Tutorials for Beginners in Hindi by Code with Harry</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem;">
+              <img class="card-img-top" src="img/c2.jfif" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="https://youtu.be/v3iUx2SNspY?si=d9JsCRAe-97rr8yK" target="_blank">Cyber Security full course for Beginnes by WsCube Cyber</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem;">
+              <img class="card-img-top" src="img/c3.jfif" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="https://youtube.com/playlist?list=PLjVLYmrlmjGeyCPgdHL2vWmEGKxcpsC0E&si=M8e2YkCiDuWiTDk9" target="_blank">MySQL Full Course for Beginners by WsCube Tech</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem;">
+              <img class="card-img-top" src="img/c4.jfif" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="https://youtu.be/hlGoQC332VM?si=aNlzaZ8MM77TY1YE" target="_blank">MySQL Complete Course in 3 hours by Apna College</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second slide -->
+      <div class="carousel-item">
+        <div class="row">
+          <!-- Card 5 -->
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem;">
+              <img class="card-img-top" src="img/c5.jfif" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="https://youtube.com/playlist?list=PLwO5-rumi8A4J7h4Fm92TEC00gfZUk7ls&si=IS87Y00C1k2MRGkT" target="_blank">Ethical Hacking Full Course for Beginner Easy to learn  -2024 Edition</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem;">
+              <img class="card-img-top" src="img/c6.jfif" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="https://youtube.com/playlist?list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w&si=gMpZ2LLX7oh9Zg-u" target="_blank">Sigma Web development Course-Tutorials for Beginners by Code with Harry</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 7 -->
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem;">
+              <img class="card-img-top" src="img/c7.jfif" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="https://youtu.be/HVjjoMvutj4?si=bbBPPXmULmEkC1hS" target="_blank">Learn full Stack Webdevelopment Full Course[28hours]</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 8 -->
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem;">
+              <img class="card-img-top" src="img/c8.jfif" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="https://youtu.be/JMUxmLyrhSk?si=SxKvkyRLyGG7heac" target="_blank">Artificila Intelligence Full Course for Beginner with edureka!</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    
+</div>
+
+<!--non technical courses-->
+<div class="container my-5" id="gallery">
+  <h1>Other <span>Courses</span></h1>
+  <hr>
+ 
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- First slide (active) -->
+      <div class="carousel-item active">
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem;">
+              <img class="card-img-top" src="img/ex1.jfif" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="https://youtu.be/AKciJ4nwFwQ?si=nP-y-OU2spvsCT7v" target="_blank">Problem Solving Skill explain by Sandeep Maheshwari</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem;">
+              <img class="card-img-top" src="img/ex2.jfif" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="https://www.youtube.com/live/C_Th0S-H9qw?si=l6BjK5q7AIqpB8Y4" target="_blank">Time Management Course (Book Summery in Hindi)</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem;">
+              <img class="card-img-top" src="img/ex3.jfif" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="https://youtu.be/yNQf5YFL2Ns?si=9xpNTYQHw_XL4wAj" target="_blank">Emotional Intelligence by Sandeep Maheshwari</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem;">
+              <img class="card-img-top" src="img/ex4.jfif" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="https://youtu.be/3NDsrp9NbcA?si=UsRbXt9vJZpLkCvB" target="_blank">"Gotta be like a chameleon" by Harshvardhan Jain</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second slide -->
+      <div class="carousel-item">
+        <div class="row">
+          <!-- Card 5 -->
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem;">
+              <img class="card-img-top" src="img/ex5.jfif" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="https://youtu.be/_YC0ELXdTcY?si=5wyv6jgv2d_pgOOo" target="_blank">Brian Tracy Best Advice on Communication Techinque</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem;">
+              <img class="card-img-top" src="img/ex7.jfif" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="https://youtu.be/eXDNkwIeOqA?si=uyZEcDv3etXkFUFk" target="_blank">Develope Leadership Skill by Simon Sinek's </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 7 -->
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem;">
+              <img class="card-img-top" src="img/ex6.jfif" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="https://youtu.be/xMdBZ43fTXk?si=DF1YV4wxAEsAziYe" target="_blank">Critical Thinking by Nicole Price and Simon Bradley</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 8 -->
+          <div class="col-md-3">
+            <div class="card" style="width: 16rem;">
+              <img class="card-img-top" src="img/ex8.jfif" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">
+                  <a href="https://youtu.be/mGNLe5mal5Q?si=MMf8T58bjG03u6KE" target="_blank"> "SECRET NINJA TECHNIQUE" of Communication Skills </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Add more slides as necessary -->
+    </div>
+    
+</div>
+
+<!-- About Us Section -->
+<div class="container my-5" id="about">
+  <h1>Student <span>Feedback</span></h1>
+  <hr>
+  <div class="row mt-4">
+    <div class="col-md-6" id="f1">
+      <img src="img/f2.jpg" class="img-fluid" alt="About Us">
+    </div>
+    <div class="col-md-6">
+       <div id="carouselExampleSlidesOnly" class="carousel slide img-fluid" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active"id="feedback">
+            <h4><p><br> <b>Rajesh K. (Java Course by Code with Harry)</b></p><br>"This Java course is a game-changer! The step-by-step explanations made difficult concepts so much easier to grasp. I love that it’s in Hindi and covers everything from basics to advanced topics. As a beginner, I found it incredibly helpful and have already started building my own projects. Thank you for making this course free and accessible! "</h4>
+          </div>
+          <div class="carousel-item">
+            <h4><p><br>
+              <b>Priya S. (Cyber Security Course by WsCube Tech)</b><br>"This course has been an amazing introduction to the world of cyber security. I never thought I'd learn this much for free! The explanations are clear, and the hands-on examples really helped me understand the material. It's perfect for anyone who's curious about ethical hacking and wants to start a career in cyber security."</p></h4>
+          </div>
+          <div class="carousel-item">
+            
+            <h4><p><br>
+              <b>Amit J. (Problem Solving Skills by Sandeep Maheshwari)</b></p><br>"Sandeep Maheshwari's problem-solving course is truly inspiring! His motivational style and practical tips have completely changed my mindset. It’s not a typical lecture; it’s full of real-life advice that can be applied immediately. The best part is that it’s free, which makes learning accessible for everyone!"</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Contact Us Section -->
+<div class="container my-5" id="contact">
+  <h1>Contact <span>Us</span></h1>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <iframe src="https://www.google.com/maps/embed/v1/place?q=Sipna+College+Of+Engineering+And+Technology,+Badnera+Road,+Gopal+Nagar,+Amravati,+Maharashtra,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+        width="100%" height="350" frameborder="0" allowfullscreen=""></iframe>
+    </div>
+    <div class="col-md-6">
+      <h4 class="text-center">Feedback Form</h4>
+      <form method="post">
+        <div class="row">
+          <div class="col-md-6">
+            <input type="text" name="fullname" placeholder="Fullname" class="form-control" required>
+            <input type="email" name="emailid" placeholder="Email ID" class="form-control" required>
+          </div>
+          <div class="col-md-6">
+            <!-- Gender Selection -->
+            <label class="form-label">Gender</label><br>
+            <input type="radio" name="gender" value="male" required> Male
+            <input type="radio" name="gender" value="female" required> Female
+            <input type="radio" name="gender" value="other" required> Other
+          </div>
+        </div>
+
+        <!-- Feedback Textarea -->
+        <textarea class="form-control mt-3" rows="6" name="feedback" placeholder="Type your feedback" required></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit" name="query_submit_btn" class="btn btn-success mt-3">Submit</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<!-- Footer Section -->
+<div class="theme" id="footer">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-3">
+        <h4>Get in Touch</h4>
+        <p>
+          <i class="bi bi-geo-alt-fill"></i> Sector 26, Pradhikaran, Nigdi, Pune, 411044 (Near Akurdi Railway Station) <br>
+          <i class="bi bi-telephone-fill"></i> +91 - 8087174347 <br>
+          <i class="bi bi-envelope-fill"></i> support@sk.com
+        </p>
+      </div>
+      <div class="col-md-3">
+        <h4>Courses Type</h4>
+        <ul>
+          <li></li>
+          <li>Techinical</li>
+          <li>Health</li>
+          <li>Business</li>
+          <li>Foreign Languages</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h4>Information</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h4>Follow Us</h4>
+        <ul id="socialicons">
+          <li><i class="bi bi-facebook"></i></li>
+          <li><i class="bi bi-twitter"></i></li>
+          <li><i class="bi bi-instagram"></i></li>
+          <li><i class="bi bi-li"></i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and Dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
